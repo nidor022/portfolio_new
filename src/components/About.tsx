@@ -1,10 +1,8 @@
 export default function About() {
   return (
     <section id="about" className="bg-white py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">
-          소개
-        </h2>
+      <div className="about-item container mx-auto px-4">
+        <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">소개</h2>
         <div className="grid gap-8 md:grid-cols-3">
           <div className="rounded-lg bg-gray-50 p-8 text-center">
             <div className="mb-4 flex justify-center">

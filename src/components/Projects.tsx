@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 interface Project {
   title: string;
-  image: string;
   tech: string;
   github: string;
+  image: string;
 }
 
 interface CompanyProject {
@@ -24,7 +24,7 @@ export default function Projects() {
     },
     {
       title: '숙박시설 예약사이트',
-      image: '/assets/img/travelmain(1).jpg',
+      image: '/assets/img/travelmain.jpg',
       tech: 'Spring, JSP, MySQL',
       github: 'https://github.com/nidor022/spring_travel',
     },
@@ -76,7 +76,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="bg-white py-20">
-      <div className="container mx-auto px-4">
+      <div className="about-item container mx-auto px-4">
         <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">프로젝트</h2>
 
         {/* 학원 프로젝트 */}
