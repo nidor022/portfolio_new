@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface Project {
   title: string;
   image: string;
@@ -52,8 +54,7 @@ export default function Projects() {
   const companyProjects: CompanyProject[] = [
     {
       title: '전문의 국가시험 문제은행 시스템',
-      description:
-        '설문 페이지, 응시자 자리배치 및 출력, 문항 관리 등 기능 개발 및 버그 수정',
+      description: '설문 페이지, 응시자 자리배치 및 출력, 문항 관리 등 기능 개발 및 버그 수정',
       tags: ['JSP', 'Java', 'PostgreSQL'],
     },
     {
@@ -66,8 +67,7 @@ export default function Projects() {
     },
     {
       title: '바이오헬스 혁신융합대학 학사관리 시스템',
-      description:
-        '교수, 학생, 수강페이지, 관리자, 비교과, 성과플랫폼 등 학사관리 시스템 개발',
+      description: '교수, 학생, 수강페이지, 관리자, 비교과, 성과플랫폼 등 학사관리 시스템 개발',
       details:
         '강의 수강페이지, 출석관리, 성적평균, 학적, 강의평가(설문), SMS 발송/인증 등 전반적인 강의 생성, 수강, 출석, 점수산출, 수강신청 및 기타 기능 담당 | 기술스택: Vue.js, Java Spring Boot, PostgreSQL | 배포: Git(GitLab) 버전관리, Linux, Jenkins',
       tags: ['Vue.js', 'Spring Boot', 'PostgreSQL', 'Jenkins'],
@@ -77,15 +77,11 @@ export default function Projects() {
   return (
     <section id="projects" className="bg-white py-20">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">
-          프로젝트
-        </h2>
+        <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">프로젝트</h2>
 
         {/* 학원 프로젝트 */}
         <div className="mb-16">
-          <h3 className="mb-8 text-2xl font-semibold text-gray-900">
-            학원 프로젝트
-          </h3>
+          <h3 className="mb-8 text-2xl font-semibold text-gray-900">학원 프로젝트</h3>
           <div className="grid gap-8 md:grid-cols-2">
             {academyProjects.map((project) => (
               <div
@@ -93,12 +89,13 @@ export default function Projects() {
                 className="group overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl"
               >
                 <div className="relative h-64 overflow-hidden bg-gray-200">
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
-                    className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                    fill
+                    className="object-cover transition-transform group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 transition-all group-hover:bg-opacity-70">
+                  <div className="bg-opacity-0 group-hover:bg-opacity-70 absolute inset-0 flex items-center justify-center bg-black transition-all">
                     <a
                       href={project.github}
                       target="_blank"
@@ -112,9 +109,7 @@ export default function Projects() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h4 className="mb-2 text-xl font-semibold text-gray-900">
-                    {project.title}
-                  </h4>
+                  <h4 className="mb-2 text-xl font-semibold text-gray-900">{project.title}</h4>
                   <p className="text-gray-600">{project.tech}</p>
                 </div>
               </div>
@@ -124,9 +119,7 @@ export default function Projects() {
 
         {/* 부트캠프 프로젝트 */}
         <div className="mb-16">
-          <h3 className="mb-8 text-2xl font-semibold text-gray-900">
-            부트캠프 프로젝트
-          </h3>
+          <h3 className="mb-8 text-2xl font-semibold text-gray-900">부트캠프 프로젝트</h3>
           <div className="grid gap-8 md:grid-cols-3">
             {bootcampProjects.map((project) => (
               <div
@@ -134,12 +127,13 @@ export default function Projects() {
                 className="group overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl"
               >
                 <div className="relative h-64 overflow-hidden bg-gray-200">
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
-                    className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                    fill
+                    className="object-cover transition-transform group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 transition-all group-hover:bg-opacity-70">
+                  <div className="bg-opacity-0 group-hover:bg-opacity-70 absolute inset-0 flex items-center justify-center bg-black transition-all">
                     <a
                       href={project.github}
                       target="_blank"
@@ -153,9 +147,7 @@ export default function Projects() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h4 className="mb-2 text-xl font-semibold text-gray-900">
-                    {project.title}
-                  </h4>
+                  <h4 className="mb-2 text-xl font-semibold text-gray-900">{project.title}</h4>
                   <p className="text-gray-600">{project.tech}</p>
                 </div>
               </div>
@@ -165,23 +157,14 @@ export default function Projects() {
 
         {/* 회사 프로젝트 */}
         <div>
-          <h3 className="mb-8 text-2xl font-semibold text-gray-900">
-            회사 프로젝트
-          </h3>
+          <h3 className="mb-8 text-2xl font-semibold text-gray-900">회사 프로젝트</h3>
           <div className="space-y-6">
             {companyProjects.map((project) => (
-              <div
-                key={project.title}
-                className="rounded-lg border border-gray-200 bg-gray-50 p-6"
-              >
-                <h4 className="mb-3 text-xl font-semibold text-gray-900">
-                  {project.title}
-                </h4>
+              <div key={project.title} className="rounded-lg border border-gray-200 bg-gray-50 p-6">
+                <h4 className="mb-3 text-xl font-semibold text-gray-900">{project.title}</h4>
                 <p className="mb-3 text-gray-700">{project.description}</p>
                 {project.details && (
-                  <p className="mb-4 text-sm leading-relaxed text-gray-600">
-                    {project.details}
-                  </p>
+                  <p className="mb-4 text-sm leading-relaxed text-gray-600">{project.details}</p>
                 )}
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
