@@ -1,23 +1,23 @@
 export default function Skills() {
   const skills = {
     Frontend: [
-      { name: 'React.js', level: 85 },
-      { name: 'Next.js', level: 80 },
-      { name: 'TypeScript', level: 85 },
-      { name: 'Vue.js', level: 75 },
-      { name: 'JavaScript', level: 90 },
+      { name: 'React.js', level: 65 },
+      { name: 'Next.js', level: 60 },
+      { name: 'TypeScript', level: 65 },
+      { name: 'Vue.js', level: 70 },
+      { name: 'JavaScript', level: 80 },
       { name: 'HTML / CSS', level: 90 },
     ],
     Backend: [
-      { name: 'Spring Boot', level: 80 },
-      { name: 'Java', level: 80 },
+      { name: 'Spring Boot', level: 65 },
+      { name: 'Java', level: 60 },
       { name: 'JSP', level: 70 },
     ],
     'Database & Tools': [
-      { name: 'PostgreSQL', level: 80 },
+      { name: 'PostgreSQL', level: 75 },
       { name: 'MySQL', level: 75 },
-      { name: 'Git / SVN', level: 85 },
-      { name: 'Linux', level: 70 },
+      { name: 'Git / SVN', level: 65 },
+      { name: 'Linux', level: 50 },
     ],
   };
 

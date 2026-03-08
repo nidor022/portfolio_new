@@ -4,11 +4,9 @@ export default function Hero() {
       <div className="container mx-auto flex min-h-screen items-center px-4">
         <div className="w-full text-center">
           <h1 className="mb-4 text-6xl font-bold text-gray-900">이루리</h1>
-          <p className="mb-6 text-2xl text-gray-700">
-            Web Developer & Frontend Engineer
-          </p>
+          <p className="mb-6 text-2xl text-gray-700">Web Developer & Frontend Engineer</p>
           <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-gray-600">
-            경력 2년 8개월의 신사업 개발 경험과 프론트엔드 부트캠프 교육을 통해
+            경력 2년 8개월의 신사업 프로젝트 개발 경험과 프론트엔드 부트캠프 교육을 통해
             <br />
             사용자 중심의 웹 애플리케이션을 개발합니다.
           </p>
